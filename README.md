@@ -20,3 +20,6 @@ With CE Image on file field:
 With CE Image on assets field: 
 {exp:ce_img:single src="{feature_img}" width="280" height="160" crop="yes" attributes='alt="{feature_img}{desc}{/feature_img}"'}
 
+# install
+
+Drag the folder into your third_party folder. 
