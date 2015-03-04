@@ -34,7 +34,7 @@ $(document).ready(function(){
 <?php	
 	echo form_open($action_url , array('id'=>'alttagsform') );
 
-	$cp_table_template['table_open'] = '<table class="mainTable addDetour" border="0" cellspacing="0" cellpadding="0">';
+	$cp_table_template['table_open'] = '<table class="mainTable" border="0" cellspacing="0" cellpadding="0">';
 	$this->table->set_template($cp_table_template);
 	$this->table->set_heading(
 		array(

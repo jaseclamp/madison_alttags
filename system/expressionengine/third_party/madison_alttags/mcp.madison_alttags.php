@@ -55,16 +55,10 @@ class Madison_alttags_mcp {
 		
 		$this->EE->db->update('files', array('description' => $alt), 'file_id = ' . $key);	
 		
-		//if assets, also update 'desc' so those can be used.
-		//$this->EE->db->select('file_name');
-		//$filename = $this->EE->db->get_where('files', 'file_id = ' . $key )->result_array();
-		//$filename = $filename[0]['file_name']; 
 		$this->EE->db->update('assets_files', array('desc' => $alt), 'file_name = "' . $filename .'"');	
 			
 		die($key);
 
-		// Redirect back to Detour Pro landing page
-		//$this->EE->functions->redirect($this->_base_url);
 	}
 
 	function strposa($haystack, $needle, $offset=0) {

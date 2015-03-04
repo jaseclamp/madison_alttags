@@ -56,18 +56,15 @@ class Madison_alttags_upd {
 	{
 		$mod_id = $this->EE->db->select('module_id')
 								->get_where('modules', array(
-									'module_name'	=> 'Detour_pro'
+									'module_name'	=> 'Madison_alttags'
 								))->row('module_id');
 		
 		$this->EE->db->where('module_id', $mod_id)
 					 ->delete('module_member_groups');
 		
-		$this->EE->db->where('module_name', 'Detour_pro')
+		$this->EE->db->where('module_name', 'Madison_alttags')
 					 ->delete('modules');
-		
-		$this->EE->load->dbforge();
-		$this->EE->dbforge->drop_table('detours');
-		$this->EE->dbforge->drop_table('detours_hits');
+
 		
 		return TRUE;
 	}
